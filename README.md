@@ -8,8 +8,13 @@ Homework 6 for Web Technologies in Spring 2019
 A webpage that allows you to search for products information using the *eBay APIs*, and the results will be displayed in a tabular format. 
 The page will also provide product details, seller details and related products. The back-end of this homework is implemented in the cloud on GCP using PHP. 
 ## Preview
-* Search Options
-* Search Result
-* Item Details
-* Item Description
-* Similar Products
+* Search Options  
+![Search Options](/pics/v61.gif)
+* Search Result  
+![Search Result](/pics/v62.gif)
+* Item Details  
+![Item Details](/pics/v63.gif)
+* Item Description  
+![Item Description](/pics/v64.gif)
+* Similar Products  
+![Similar Products](/pics/v65.gif)
