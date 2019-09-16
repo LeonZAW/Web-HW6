@@ -720,17 +720,17 @@
                 detail += "<tr><td><b>"+keys[i]+"</b></td><td>"+specifics[keys[i]]+"</td></tr>";
             }
             detail += "</table>";
-            detail += "<div id='seller_message'><div id='seller_msg'>click to show seller message</div><img id='img_sm' src='http://csci571.com/hw/hw6/images/arrow_down.png' onclick='add_iframe(this)'></div><div id='div-iframe' style='padding:0 40px;'></div>"
-            detail += "<div id='similar_item'><div id='s_item'>click to show similar items</div><img id='img_si' src='http://csci571.com/hw/hw6/images/arrow_down.png' onclick='add_similar(this)'></div><div id='div-similar'></div>"
+            detail += "<div id='seller_message'><div id='seller_msg'>click to show seller message</div><img id='img_sm' src='arrow_down.png' onclick='add_iframe(this)'></div><div id='div-iframe' style='padding:0 40px;'></div>"
+            detail += "<div id='similar_item'><div id='s_item'>click to show similar items</div><img id='img_si' src='arrow_down.png' onclick='add_similar(this)'></div><div id='div-similar'></div>"
         }
 
         function add_iframe(img){
             if(img.src.endsWith("arrow_down.png")){
-                document.getElementById("img_si").src = "http://csci571.com/hw/hw6/images/arrow_down.png";
+                document.getElementById("img_si").src = "arrow_down.png";
                 document.getElementById("s_item").innerHTML="click to show similar items";
                 document.getElementById("div-similar").innerHTML="";
 
-                img.src = "http://csci571.com/hw/hw6/images/arrow_up.png";
+                img.src = "arrow_up.png";
                 document.getElementById("seller_msg").innerHTML="click to hide seller message";
                 if(!(!jsonObj.description||jsonObj.description=="")){
                     document.getElementById("div-iframe").innerHTML="<iframe src='<?php echo $_SERVER['PHP_SELF']; ?>?description="+similar_id+"' height='10' frameborder='0' scrolling='no' id='iframe' onload='this.height = this.contentWindow.document.body.scrollHeight;'></iframe>";
@@ -739,7 +739,7 @@
                 }
             }
             else{
-                img.src = "http://csci571.com/hw/hw6/images/arrow_down.png";
+                img.src = "arrow_down.png";
                 document.getElementById("seller_msg").innerHTML="click to show seller message";
                 document.getElementById("div-iframe").innerHTML="";
             }
@@ -748,18 +748,18 @@
 
         function add_similar(img){
             if(img.src.endsWith("arrow_down.png")){
-                document.getElementById("img_sm").src = "http://csci571.com/hw/hw6/images/arrow_down.png";
+                document.getElementById("img_sm").src = "arrow_down.png";
                 document.getElementById("seller_msg").innerHTML="click to show seller message";
                 document.getElementById("div-iframe").innerHTML="";
 
-                img.src = "http://csci571.com/hw/hw6/images/arrow_up.png";
+                img.src = "arrow_up.png";
                 document.getElementById("s_item").innerHTML="click to hide similar items";
 
                 generateSimilar(similar_id);
                 document.getElementById("div-similar").innerHTML=similar;
             }
             else{
-                img.src = "http://csci571.com/hw/hw6/images/arrow_down.png";
+                img.src = "arrow_down.png";
                 document.getElementById("s_item").innerHTML="click to show similar items";
                 document.getElementById("div-similar").innerHTML="";
             }
